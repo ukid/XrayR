@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - release
     paths:
       - "**/*.go"
       - "go.mod"
@@ -13,10 +13,10 @@ on:
       - 'v*'
   pull_request:
     branches:
-      - 'master'
+      - 'release'
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: xrayr-project/xrayr
+  IMAGE_NAME: ukid/xrayr
 
 jobs:
   build:
